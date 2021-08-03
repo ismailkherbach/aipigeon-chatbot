@@ -1,0 +1,214 @@
+html,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+caption,
+tfoot,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  //font-size: 100%;
+  vertical-align: baseline;
+  font-family: "IBM Plex Sans", sans-serif;
+}
+img,
+video,
+span {
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  color: black;
+  background-color: rgb(247, 247, 247) !important;
+  line-height: 1;
+  position: relative;
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+
+  main {
+    height: 100%;
+    width: 100%;
+    background-color: rgb(247, 247, 247);
+
+    .container {
+      height: 100%;
+      width: 100%;
+      min-width: 100%;
+      margin: 0;
+      padding: 0;
+      overflow-x: scroll;
+    }
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+.flex {
+  display: flex;
+}
+.fdc {
+  flex-direction: column;
+}
+.fdcr {
+  flex-direction: column-reverse;
+}
+.fdr {
+  flex-direction: row;
+}
+.fdrr {
+  flex-direction: row-reverse;
+}
+.jcc {
+  justify-content: center;
+}
+.jcfs {
+  justify-content: flex-start;
+}
+.jcfe {
+  justify-content: flex-end;
+}
+.jcsb {
+  justify-content: space-between;
+}
+.jcsa {
+  justify-content: space-around;
+}
+.jcse {
+  justify-content: space-evenly;
+}
+.aic {
+  align-items: center;
+}
+.aifs {
+  align-items: flex-start;
+}
+.aife {
+  align-items: flex-end;
+}
+.ais {
+  align-items: stretch;
+}
+.aib {
+  align-items: baseline;
+}
+.fww {
+  flex-wrap: wrap;
+}
+.pointer {
+  cursor: pointer;
+}
+::placeholder {
+  font-family: "IBM Plex Sans", sans-serif;
+}
+
+.wb-100 {
+  width: 100%;
+}
+.wb-90 {
+  width: 90%;
+}
