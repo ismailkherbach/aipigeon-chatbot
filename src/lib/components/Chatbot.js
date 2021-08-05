@@ -1,19 +1,12 @@
 import "../assets/styles.scss";
 import React, { Component } from "react";
 import robotLogo from "../assets/icons/robotIcon.svg";
-import clientIcon from "../assets/icons/clientIcon.svg";
 import askIcon from "../assets/icons/askIcon.svg";
 import closeIcon from "../assets/icons/closechat.svg";
 import handEmoji from "../assets/icons/handemoji.svg";
 import sendIcon from "../assets/icons/sendmessage.svg";
 import askIconDisabled from "../assets/icons/askIconDisabled.svg";
-import game_1 from "../assets/games/game1.svg";
-import game_3 from "../assets/games/game3.svg";
-import game_5 from "../assets/games/game5.svg";
-import game_6 from "../assets/games/game6.svg";
-import game_7 from "../assets/games/game7.svg";
-import game2 from "../assets/games/game2.svg";
-import game4 from "../assets/games/game4.svg";
+
 import axios from "axios";
 
 export default class Chatbot extends Component {
