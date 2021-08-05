@@ -16,9 +16,6 @@ import game2 from "../assets/games/game2.svg";
 import game4 from "../assets/games/game4.svg";
 import axios from "axios";
 
-var authUser = localStorage.getItem("user")
-  ? localStorage.getItem("user")
-  : null;
 export default class Chatbot extends Component {
   constructor(props) {
     super(props);
@@ -30,7 +27,7 @@ export default class Chatbot extends Component {
       question: "",
       questions: [],
       chat: false,
-      game: "",
+      game: "德州推广1",
       answers: [],
     };
   }
@@ -93,7 +90,7 @@ export default class Chatbot extends Component {
   render() {
     return (
       <div>
-        {authUser && (
+        {
           <div className="circle-chat-container flex fdr aic jcc">
             <div className="lets-talk-chat flex fdr aic jcc">
               <img alt="img" src={handEmoji} />
@@ -106,8 +103,8 @@ export default class Chatbot extends Component {
               <img alt="img" src={askIcon} />
             </div>
           </div>
-        )}
-        {this.state.chat && authUser && (
+        }
+        {this.state.chat && (
           <div className="chat-container flex fdc aic jcc">
             <div className="chatbot">
               <div className="top-cover flex fdr aic jcfs">
@@ -130,83 +127,7 @@ export default class Chatbot extends Component {
                 <div className="question flex fdr aic jcfs">
                   <img alt="img" src={robotLogo} /> <p>想看我能做什么吗?</p>
                 </div>
-                {
-                  <div className="games-container flex fdc aic jcc">
-                    <p>S选择你想测试的游戏</p>
-                    <div className="games flex fdr aic jcc">
-                      <div
-                        className={`game ${
-                          this.state.game === "HHpoker" ? "" : ""
-                        } flex fdc aic jcc`}
-                        onClick={() => this.handleChooseGame("HHpoker")}
-                      >
-                        <img alt="game1" src={game_1} />
-                      </div>
-                      <div
-                        className={`game ${
-                          this.state.game === "德州推广" ? "" : ""
-                        } flex fdc aic jcc`}
-                        onClick={() => this.handleChooseGame("渔人码头")}
-                      >
-                        <img alt="game1" src={game2} />
-                      </div>
-                    </div>
 
-                    <div className="games flex fdr aic jcc">
-                      <div
-                        className={`game ${
-                          this.state.game === "德州推广" ? "" : ""
-                        } flex fdc aic jcc`}
-                        onClick={() => this.handleChooseGame("聚合")}
-                      >
-                        <img alt="game1" src={game_3} />
-                      </div>
-                      <div
-                        className={`game ${
-                          this.state.game === "德州推广" ? "" : ""
-                        } flex fdc aic jcc`}
-                        onClick={() => this.handleChooseGame("德州推广")}
-                      >
-                        <img alt="game1" src={game4} />
-                      </div>
-                    </div>
-
-                    <div className="games flex fdr aic jcc">
-                      <div
-                        className={`game ${
-                          this.state.game === "德州推广" ? "" : ""
-                        } flex fdc aic jcc`}
-                        onClick={() => this.handleChooseGame("玩玩扑克")}
-                      >
-                        <img alt="game1" src={game_5} />
-                      </div>
-                      <div
-                        className={`game ${
-                          this.state.game === "德州推广" ? "" : ""
-                        } flex fdc aic jcc`}
-                        onClick={() => this.handleChooseGame("德州推广1")}
-                      >
-                        <img alt="game1" src={game_6} />
-                      </div>
-                    </div>
-                    <div className="games flex fdr aic jcc">
-                      <div
-                        className={`game ${
-                          this.state.game === "明星娱乐" ? "" : ""
-                        } flex fdc aic jcc`}
-                        onClick={() => this.handleChooseGame("明星娱乐")}
-                      >
-                        <img alt="game7" src={game_7} />
-                      </div>
-                    </div>
-                  </div>
-                }
-                {this.state.game !== "" && (
-                  <div className="answer flex fdr aic jcfe">
-                    <p>{this.state.game}</p>
-                    <img alt="img" src={clientIcon} />
-                  </div>
-                )}
                 {this.state.questions.map((e, i) => {
                   return (
                     <div className="answer flex fdc aife jcc">
